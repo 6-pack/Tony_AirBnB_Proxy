@@ -41,6 +41,13 @@ app.get('/rooms', (req, res) => {
   .catch(err => console.log(err));
 });
 
+app.get('/data', (req, res) => {
+  axios.get(`http://localhost:3002/data`)
+  .then(result => res.status(200).send(result.data))
+  .catch(err => console.log(err));
+});
+
+
 app.listen(PORT, (err) => {
   if (err) {
     console.log(`Cannot connect to server through port ${PORT}`);
