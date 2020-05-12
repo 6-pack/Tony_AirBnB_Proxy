@@ -1,34 +1,21 @@
 #container {
   display: grid;
-  grid-template-columns: 650px auto;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "carousel carousel"
-    "reviews reservation"
-    "MHYML MHYML";
-}
-
-#carousel {
-  grid-area: carousel;
+  grid-template-columns: 660px auto;
 }
 
 #reviews {
-  grid-area: reviews;
   padding-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 75px;
 }
 
 #Reservation {
-  grid-area: reservation;
   position: sticky;
-  top: 20px;
-  left: 20px;
+  top: 0;
   padding: 10px 0 0 50px;
 }
 
-#MHYML{
-  grid-area: MHYML;
-  padding-left: 100px;
+#body {
+  margin-left: 25%;
 }
 
 

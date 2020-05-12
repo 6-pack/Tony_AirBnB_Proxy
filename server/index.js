@@ -6,7 +6,6 @@ const axios = require('axios');
 const app = express()
 const PORT = 3000;
 
-
 app.use(bodyParser.json());
 app.use('/', (req, res, next) => {
   console.log(` ${req.method} request from ${req.originalUrl}`);
@@ -15,7 +14,6 @@ app.use('/', (req, res, next) => {
 });
 
 app.use(express.static(path.join(__dirname, '../public/')));
-
 
 app.get('/rooms/:roomID/reviews', (req, res) => {
   axios.get('http://localhost:3001/rooms/2/reviews')
@@ -46,7 +44,6 @@ app.get('/data', (req, res) => {
   .then(result => res.status(200).send(result.data))
   .catch(err => console.log(err));
 });
-
 
 app.listen(PORT, (err) => {
   if (err) {
