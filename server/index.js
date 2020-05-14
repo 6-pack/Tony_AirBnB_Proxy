@@ -27,8 +27,8 @@ app.get('/rooms/:roomID/reviews/:phrase', (req, res) => {
   .catch(err => console.log(err));
 });
 
-app.get('/image', (req, res) => {
-  axios.get(`http://localhost:3003/image`)
+app.get('/carousel', (req, res) => {
+  axios.get(`http://localhost:3003/carousel`)
   .then(result => res.status(200).send(result.data))
   .catch(err => console.log(err));
 });
